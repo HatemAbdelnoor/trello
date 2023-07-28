@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "da3005ab-8065-4100-b96b-0860f3851521",
+		"name": "Assignment6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26585616"
+	},
+	"item": [
+		{
+			"name": "taskReq",
+			"item": [
+				{
+					"name": "getAlltasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "tasktoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI0NjY3MGUxNWU2NzQ3OTEwNGE0MGQiLCJwYXNzIjoiJDJhJDA4JEtxZGpGRlVTMzFuVDN0blBKTmFaak9adjlacjNpYkVYU25iT0hvWUJZVFNTd2IvdVZSWnFtIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjI3MDczLCJleHAiOjE2ODk2MzA2NzN9.PrPboQlVT7NVFIeCa-CByele4zbGxlEuD2gmVIgRjbQ",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "http://localhost:5000/task"
+					},
+					"response": []
+				},
+				{
+					"name": "getAlltasksOneUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "tasktoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI0NjY3MGUxNWU2NzQ3OTEwNGE0MGQiLCJwYXNzIjoiJDJhJDA4JEtxZGpGRlVTMzFuVDN0blBKTmFaak9adjlacjNpYkVYU25iT0hvWUJZVFNTd2IvdVZSWnFtIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjI3MDczLCJleHAiOjE2ODk2MzA2NzN9.PrPboQlVT7NVFIeCa-CByele4zbGxlEuD2gmVIgRjbQ",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:5000/task/getTasksById"
+					},
+					"response": []
+				},
+				{
+					"name": "getTasksByIdWithData",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "tasktoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI0NjY3MGUxNWU2NzQ3OTEwNGE0MGQiLCJwYXNzIjoiJDJhJDA4JEtxZGpGRlVTMzFuVDN0blBKTmFaak9adjlacjNpYkVYU25iT0hvWUJZVFNTd2IvdVZSWnFtIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjMwNzMwLCJleHAiOjE2ODk2MzQzMzB9._e-D-LvIdqWpPX4vMz8daJSQ34HPPyKX7e3rp9KpjWY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/task/getTasksByIdWithData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"getTasksByIdWithData"
+							],
+							"query": [
+								{
+									"key": "tasktoken",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI0NjY3MGUxNWU2NzQ3OTEwNGE0MGQiLCJwYXNzIjoiJDJhJDA4JEtxZGpGRlVTMzFuVDN0blBKTmFaak9adjlacjNpYkVYU25iT0hvWUJZVFNTd2IvdVZSWnFtIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjI3MDczLCJleHAiOjE2ODk2MzA2NzN9.PrPboQlVT7NVFIeCa-CByele4zbGxlEuD2gmVIgRjbQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addTask",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "tasktoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI0NjY3MGUxNWU2NzQ3OTEwNGE0MGQiLCJwYXNzIjoiJDJhJDA4JEtxZGpGRlVTMzFuVDN0blBKTmFaak9adjlacjNpYkVYU25iT0hvWUJZVFNTd2IvdVZSWnFtIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjI3MDczLCJleHAiOjE2ODk2MzA2NzN9.PrPboQlVT7NVFIeCa-CByele4zbGxlEuD2gmVIgRjbQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"title\":\"clean the lobylobby\" ,\r\n \"description\":\"you have to clean every inch of loby\" ,\r\n  \"status\" :\"toDo\" ,\r\n  \"assignTo\": \"64b466d9e15e67479104a411\",\r\n  \"deadline\" :\"17/9/2023\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/task"
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "tasktoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI0NjY3MGUxNWU2NzQ3OTEwNGE0MGQiLCJwYXNzIjoiJDJhJDA4JEtxZGpGRlVTMzFuVDN0blBKTmFaak9adjlacjNpYkVYU25iT0hvWUJZVFNTd2IvdVZSWnFtIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjI3MDczLCJleHAiOjE2ODk2MzA2NzN9.PrPboQlVT7NVFIeCa-CByele4zbGxlEuD2gmVIgRjbQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"clean ssecond room\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/task"
+					},
+					"response": []
+				},
+				{
+					"name": "updateTask",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "tasktoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI0NjY3MGUxNWU2NzQ3OTEwNGE0MGQiLCJwYXNzIjoiJDJhJDA4JEtxZGpGRlVTMzFuVDN0blBKTmFaak9adjlacjNpYkVYU25iT0hvWUJZVFNTd2IvdVZSWnFtIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjI3MDczLCJleHAiOjE2ODk2MzA2NzN9.PrPboQlVT7NVFIeCa-CByele4zbGxlEuD2gmVIgRjbQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\" :\"clean ssecond room\",\r\n \"description\":\"you have to clean every inch\" ,\r\n \"status\":\"doing\"}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/task"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userReq",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"userName\":\"malik\", \r\n \"email\": \"malik@gmail.com\" , \r\n \"age\" : \"22\" ,\r\n \"gender\": \"Male\" ,\r\n \"phone\" : \"01552549558\" , \r\n \"password\": \"hatem123\"  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"email\":\"malik@gmail.com\",\r\n \"password\":   \"hatem12345\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "AllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/user"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "usertoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI1YmMwNjE0MjE5M2UyMWI0NjcwMjciLCJwYXNzIjoiJDJhJDA4JHlMc1VQNll3bWwwZ0d5NHYxRFFJVy5sWGJhd0RHQVVNbTNDWVZaYXpkUno4c2k0ai5qcEltIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjMyMDU4LCJleHAiOjE2ODk2MzU2NTh9.CwQFV5MAw5djz2qWrqgTUvq8dAtc_9x6cjUy-Fh10wI",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:5000/task"
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "usertoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NGI1YmMwNjE0MjE5M2UyMWI0NjcwMjciLCJwYXNzIjoiJDJhJDA4JE5SZVdHb2VhSHgyWk16SmtaMU1lcU9XTGVLZWtnQzZzaUdmSXJXLkhZbGJlVklGd1VKTEFxIiwibG9nZWRpbiI6dHJ1ZSwiaWF0IjoxNjg5NjMxNzcyLCJleHAiOjE2ODk2MzUzNzJ9.DN1onL_0ht4W15nDzREC0txguWbV5hfQGgqpg14scaw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"oldPassword\":\"hatem123\",\r\n\"newPassword\":\"hatem12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/auth"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
