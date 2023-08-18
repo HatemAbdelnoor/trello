@@ -3,6 +3,9 @@ import userModel from '../../../../DB/model/User.model.js';
 import { asyncHandler } from '../../utils/errorHandling.js';
 
 
+
+
+
 export const getUsers =  asyncHandler(  async (req, res) => {
     const users = await userModel.find()
     return res.json({ message: "Done"  , users})
